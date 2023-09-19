@@ -1,4 +1,4 @@
-from graph import Graph
+from Graph.graph import Graph
 
 
 class Dijkstra:
@@ -62,6 +62,7 @@ class Dijkstra:
     def draw(self, source: str):
         self.__run_algorithm(source)
         print(self.__dist)
+        return self.__dist, self.__prev
 
     def __update_dist(self, node1: str, node2: str):
         cost = self.graph.get_cost(node1, node2)
