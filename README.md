@@ -14,3 +14,10 @@ dijkstra = Dijkstra(graph: Graph)
 print(dijkstra.get_shortest_path("A": str (source), "D": str (Dest)))
 dijkstra.draw("A")
 ```
+
+### Bellman-Ford algorithm
+```
+bellman_ford = BellmanFord(graph: Graph)
+print(bellman_ford.get_shortest_path("A": str (source), "D": str (Dest)))
+bellman_ford.draw("A")
+```

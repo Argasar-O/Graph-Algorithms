@@ -15,12 +15,15 @@ class RunAlgoTest(unittest.TestCase):
         dist, prev = algo.draw("A")
         self.assertEqual(dist, {'A': 0, 'B': 1, 'C': 2, 'D': 3})
         self.assertEqual(prev, {'A': None, 'C': 'A', 'B': 'A', 'D': 'C'})
+        self.assertEqual(algo.get_shortest_path("A", "D"), ['A', 'C', 'D'])
 
     def test_bellman_ford(self):
         algo = BellmanFord(self.graph)
         dist, prev = algo.draw("A")
         self.assertEqual(dist, {'A': 0, 'B': 1, 'C': 2, 'D': 3})
         self.assertEqual(prev, {'A': None, 'C': 'A', 'B': 'A', 'D': 'C'})
+        self.assertEqual(algo.get_shortest_path("A", "D"), ['A', 'C', 'D'])
+
 
 if __name__ == '__main__':
     unittest.main()
